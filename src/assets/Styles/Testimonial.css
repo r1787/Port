@@ -1,0 +1,43 @@
+/* Section base */
+.testimonial-section {
+  padding: 84px 20px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+/* Light theme */
+.testimonial-section.light {
+  background: linear-gradient(180deg, var(--bg-light), #ffffff);
+  color: var(--text-light);
+}
+
+/* Dark theme */
+.testimonial-section.dark {
+  background: linear-gradient(180deg, var(--bg-dark), #0b0f15);
+  color: var(--text-dark);
+}
+
+/* Inner wrapper */
+.testimonial-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.testimonial-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.testimonial-title span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* subtitle */
+.testimonial-sub {
+  color: rgba(0, 0, 0, 0.6);
+}

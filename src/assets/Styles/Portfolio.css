@@ -1,0 +1,104 @@
+.portfolio-section {
+  padding: 80px 20px;
+}
+.portfolio-section.light {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  color: #111;
+}
+.portfolio-section.dark {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #f9f9f9;
+}
+.container {
+  max-width: 1600px; /* বড় স্ক্রিনে ফাঁকা জায়গা কমানোর জন্য */
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* কার্ডগুলো বড় করা হলো */
+  gap: 30px;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(13, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 300px; /* কার্ডের height বড় করা হলো */
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 18px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-info {
+  transform: translateY(0);
+}
+
+.btn-view {
+  background: #ff4d6d;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #e63956;
+}
+
+/* Responsive Layout */
+@media (min-width: 1600px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(4, 4fr); /* ডেস্কটপে ৪টা কার্ড */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* ট্যাবলেটে ২টা */
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* মোবাইলে ১টা */
+  }
+}

@@ -1,0 +1,88 @@
+.service-section {
+  padding: 100px 0;
+}
+.service-section.light {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  color: #111;
+}
+.service-section.dark {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #f9f9f9;
+}
+.service-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Service Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.service-card {
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(11, 237, 241, 0.08);
+}
+.service-card .service-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.service-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(79, 79, 79, 0.15);
+}
+.service-card:hover .service-icon {
+  color: #1dd1a1;
+}
+
+/* Dark & Light Mode */
+.service-card.light {
+  background: #ffffff;
+  color: #222;
+}
+.service-card.dark {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+.service-card.dark .service-desc {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .service-card {
+    padding: 25px 20px;
+  }
+}
